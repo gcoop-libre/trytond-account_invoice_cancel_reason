@@ -15,9 +15,8 @@ class CancelReason(ModelSQL, ModelView):
     name = fields.Char('Name', translate=True)
 
 
-class Invoice:
+class Invoice(metaclass=PoolMeta):
     __name__ = 'account.invoice'
-    __metaclass__ = PoolMeta
     cancel_reason = fields.Many2One('account.invoice.cancel.reason',
         'Cancel Reason', states={
             'required': ((Eval('state') == 'cancel')
