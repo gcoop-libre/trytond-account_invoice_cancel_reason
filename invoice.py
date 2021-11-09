@@ -19,16 +19,16 @@ class Invoice(metaclass=PoolMeta):
     __name__ = 'account.invoice'
     cancel_reason = fields.Many2One('account.invoice.cancel.reason',
         'Cancel Reason', states={
-            'required': ((Eval('state') == 'cancel')
+            'required': ((Eval('state') == 'cancelled')
                 & ~Eval('context', {}).get('invoice_force_cancel', False)),
-            'readonly': Eval('state') == 'cancel',
+            'readonly': Eval('state') == 'cancelled',
             },
         depends=['state'])
     cancel_description = fields.Text('Cancel Description',
         states={
-            'required': ((Eval('state') == 'cancel')
+            'required': ((Eval('state') == 'cancelled')
                 & ~Eval('context', {}).get('invoice_force_cancel', False)),
-            'readonly': Eval('state') == 'cancel',
+            'readonly': Eval('state') == 'cancelled',
             },
         depends=['state'])
 
