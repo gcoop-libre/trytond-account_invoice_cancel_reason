@@ -5,9 +5,6 @@ from trytond.pool import PoolMeta
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
 
-__all__ = ['CancelReason', 'Invoice']
-
-
 
 class CancelReason(ModelSQL, ModelView):
     'Invoice Cancel Reason'
