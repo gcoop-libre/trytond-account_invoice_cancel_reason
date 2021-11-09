@@ -32,4 +32,4 @@ class Invoice(metaclass=PoolMeta):
     @classmethod
     def delete(cls, invoices):
         with Transaction().set_context(invoice_force_cancel=True):
-            super(Invoice, cls).delete(invoices)
+            super().delete(invoices)
