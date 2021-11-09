@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
+
+<!-- Cancel Reasons -->
+
         <record model="ir.ui.view" id="account_invoice_cancel_reason_view_form">
             <field name="model">account.invoice.cancel.reason</field>
             <field name="type">form</field>
@@ -45,16 +48,18 @@
             <field name="perm_delete" eval="True"/>
         </record>
 
+        <menuitem action="act_account_invoice_cancel_reason"
+            id="menu_account_invoice_cancel_reason"
+            parent="account.menu_account_configuration"
+            sequence="1"/>
+
+<!-- Invoice -->
+
         <record model="ir.ui.view" id="invoice_view_form">
             <field name="model">account.invoice</field>
             <field name="name">invoice_form</field>
             <field name="inherit" ref="account_invoice.invoice_view_form"/>
         </record>
 
-        <!-- Menus -->
-        <menuitem action="act_account_invoice_cancel_reason"
-            id="menu_account_invoice_cancel_reason" 
-            parent="account.menu_account_configuration"
-            sequence="1"/>
     </data>
 </tryton>
