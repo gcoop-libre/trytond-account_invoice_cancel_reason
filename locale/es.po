@@ -10,33 +10,9 @@ msgctxt "field:account.invoice,cancel_reason:"
 msgid "Cancel Reason"
 msgstr "Motivo de cancelación"
 
-msgctxt "field:account.invoice.cancel.reason,create_date:"
-msgid "Create Date"
-msgstr "Fecha de Creación"
-
-msgctxt "field:account.invoice.cancel.reason,create_uid:"
-msgid "Create User"
-msgstr "Usuario de creación"
-
-msgctxt "field:account.invoice.cancel.reason,id:"
-msgid "ID"
-msgstr "Identificador"
-
 msgctxt "field:account.invoice.cancel.reason,name:"
 msgid "Name"
 msgstr "Motivo"
-
-msgctxt "field:account.invoice.cancel.reason,rec_name:"
-msgid "Name"
-msgstr "Motivo"
-
-msgctxt "field:account.invoice.cancel.reason,write_date:"
-msgid "Write Date"
-msgstr "Fecha modificación"
-
-msgctxt "field:account.invoice.cancel.reason,write_uid:"
-msgid "Write User"
-msgstr "Usuario modificación"
 
 msgctxt "model:account.invoice.cancel.reason,name:"
 msgid "Invoice Cancel Reason"
