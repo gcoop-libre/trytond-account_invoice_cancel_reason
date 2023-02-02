@@ -33,6 +33,12 @@ class Invoice(metaclass=PoolMeta):
         depends=['state'])
 
     @classmethod
+    def __setup__(cls):
+        super(Invoice, cls).__setup__()
+        cls._check_modify_exclude.update({
+            'cancel_reason', 'cancel_description'})
+
+    @classmethod
     def delete(cls, invoices):
         with Transaction().set_context(invoice_force_cancel=True):
             super().delete(invoices)
